@@ -2,6 +2,7 @@
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+extern crate dont_disappear;
 
 fn main() {
 //generate random number using rand crate
@@ -38,8 +39,9 @@ fn main() {
         Ordering::Equal => {println!("You win!");
         break;
     }
-    }
-
+}
  } //end of loop
 //end of main
+// this uses a crate to avoid the windows command prompt closing too early
+dont_disappear::any_key_to_continue::default();
 }
